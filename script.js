@@ -2,8 +2,10 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-// TODO: Add code to display the current date in the header of the page.
 
+// TODO: Add code to display the current date in the header of the page.
+var todaysDate = new Date(1000);
+document.getElementById("currentDay").innerHTML = Date();
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
