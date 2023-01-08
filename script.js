@@ -1,17 +1,13 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-var saveButton = document.querySelector(".saveBtn");
+var saveButton = document.querySelectorAll(".saveBtn");
 var textAreaEl = document.querySelector("textarea");
-var totalHours = 11;
-var currentState;
-var timeTableElement;
-var currentHour = Date ();
+var currentDate = dayjs();
 
 
 // displays the current date.
-var todaysDate = new Date(1000);
-document.getElementById("currentDay").innerHTML = Date();
+$("#currentDay").text(currentDate.format("MMMM/DD/YYYY"));
   // Add a listener for click events on the save button.
 $(".saveBtn").on("click", saveSchedule);
     function saveSchedule() {
@@ -21,11 +17,13 @@ $(".saveBtn").on("click", saveSchedule);
       localStorage.setItem(userInput, userValue);
       console.log("save");
   } 
+  saveSchedule();
 //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
- 
+
+    
   //
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
