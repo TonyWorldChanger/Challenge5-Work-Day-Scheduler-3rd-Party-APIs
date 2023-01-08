@@ -4,11 +4,13 @@
 var saveButton = document.querySelectorAll(".saveBtn");
 var textAreaEl = document.querySelector("textarea");
 var currentDate = dayjs();
+var totalHours = 11;
 
 
 // displays the current date.
-$("#currentDay").text(currentDate.format("MMMM/DD/YYYY"));
-  // Add a listener for click events on the save button.
+$("#currentDay").text(currentDate.format("MMMM DD,YYYY"));
+
+  // Adds a listener for click events on the save button and saves input to localStorage.
 $(".saveBtn").on("click", saveSchedule);
     function saveSchedule() {
       var userInput = $(this).parent().attr('id');
@@ -22,7 +24,11 @@ $(".saveBtn").on("click", saveSchedule);
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-
+    function loadSchedule() {
+      
+      
+    }
+    loadSchedule();
     
   //
   // TODO: Add code to apply the past, present, or future class to each time
