@@ -8,7 +8,7 @@ var totalHours = 11;
 
 
 // displays the current date.
-$("#currentDay").text(currentDate.format("MMMM DD,YYYY"));
+$("#currentDay").text(currentDate.format("MMMM DD,YYYY HH:mm A"));
 
   // Adds a listener for click events on the save button and saves input to localStorage.
 $(".saveBtn").on("click", saveSchedule);
