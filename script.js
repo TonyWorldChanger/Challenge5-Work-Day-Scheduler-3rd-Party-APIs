@@ -2,9 +2,11 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var saveButton = document.querySelectorAll(".saveBtn");
-var textAreaEl = document.querySelector("textarea");
+var textAreaEl = document.querySelectorAll("textarea");
 var currentDate = dayjs();
 var totalHours = 11;
+var divEl = document.querySelectorAll(".time-block");
+var currentHour = currentDate.format("H");
 
 
 // displays the current date.
@@ -25,15 +27,42 @@ $(".saveBtn").on("click", saveSchedule);
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
     function loadSchedule() {
-      
+      console.log("load", divEl);
+      for (var i = 0; i < divEl.length; i++) {
+        var textId = divEl[i].id
+        var storageText = localStorage.getItem(textId);
+        
+        var textArea = divEl[i].children[1]
+        console.log(textArea);
+
+        if (storageText !== undefined) {
+          textArea.innerText = storageText       }
+      }
       
     }
     loadSchedule();
     
-  //
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  
+  function hourChange() {
+    console.log("load", divEl);
+    for (var i = 0; i < divEl.length; i++) {
+      var textId = divEl[i].id
+      var divHour = textId.split("hour-")[1]
+      console.log(divHour);
+        if (divHour < currentHour) {
+          divEl[i].classList.add("past");
+        } else if (divHour === currentHour) {
+          divEl[i].classList.add("present");
+        } else if (divHour > currentHour) {
+          divEl[i].classList.add("future");
+        }
+
+      
+    }
+    
+  }
+  hourChange();
