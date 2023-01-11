@@ -27,17 +27,15 @@ No installation required
 
 ## Usage
 
-[Github Page Address](https://tonyworldchanger.github.io/Challeng4-Create-Code-Quiz-with-Timer/)
+[Github Page Address]()
 
- The application works by pressing the "Start Quiz" button, then the user will be prompted with true or false questions. When the "Start Quiz" button is clicked, the timer will start. The timer will deduct additional time for each incorrect answer. The user's score will be shown after after the quiz is completed, please and name to available slot. The submit button will return the user to the beginning of the app. The high scores button does not work unfortunately.
+ The scheduler will by typing anything in the time slots that the user needs to do for the day. Once complete, pressing the "save icon" button will save the information to your local storage. This will stay on the scheduler until deleted. The date at the top will stay current with the current day, date, and time. 
 
 ### ScreenShot of Challenge
-![Challenge4](assets/challenge%204%20quiz%20timer.PNG)
+![Challenge5](Assets/Scheduler-screenShot.PNG)
 
 
 ## Credits
-William Horn Youtube page
-Web Dev Simplified Youtube page
-Instructor Aaron Brown
+Dani Krossing Youtube
+Jun Park Youtube
 TA Cameron Verver
-Tutor Dru Sanchez
